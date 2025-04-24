@@ -7,39 +7,66 @@
 
 </head>
 <body>
+
+  <audio id="background-music" src="audio.mp3" loop preload="auto"></audio>
+
+  <button id="music-toggle" style="
+    position: absolute;
+    top: 250px;
+    right:400px;
+    padding: 10px 20px;
+    font-size: 40px;
+    border: none;
+    background: rgb(0, 139, 9);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;">
+    Play Music
+  </button>
+  
+  <script>
+    const music = document.getElementById("background-music");
+    const button = document.getElementById("music-toggle");
+  
+    let isPlaying = false;
+  
+    button.addEventListener("click", () => {
+      if (!isPlaying) {
+        music.play();
+        button.textContent = "Pause Music";
+      } else {
+        music.pause();
+        button.textContent = "Play Music";
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+
 <!-- partial:index.partial.html -->
 <div class="Container">
   <!-- last card -->
   <div class="Picture-video" id="video">
-    <iframe class="Picture-img-video" width="300" height="480"  src="video/Play.mp4" frameborder="0" allowfullscreen></iframe>
-    <div class="Picture-note-video"><span>Teli madum favourite students<a class="Network-video" href="https://codepen.io/DeyJordan" target="_top"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111501.png" alt="CodePen" /></a><a class="Network" href="https://twitter.com/DeyJordan" target="_top"><img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" alt="twitter" /></a></span></div>
+   
   </div>
   <!-- other cards -->
   
-  <div class="Picture">
-    <img class="Picture-img" src="images/16.jpg" alt="" />
-    <div class="Picture-note"><span>Teli Madum</span></div>
-  </div>
-  <div class="Picture">
-    <img class="Picture-img" src="images/15.jpg" alt="" />
-    <div class="Picture-note"><span>Teli Madam</span></div>
-  </div>
 
   <div class="Picture">
     <img class="Picture-img" src="images/14.jpg" alt="" />
-    <div class="Picture-note"><span>favourite student</span></div>
+    <div class="Picture-note"><span>Dhoke Madam </span></div>
   </div>
   <div class="Picture">
     <img class="Picture-img" src="images/13.jpg" alt="" />
-    <div class="Picture-note"><span>favourite student</span></div>
+    <div class="Picture-note"><span>class 12th science</span></div>
   </div>
   <div class="Picture">
     <img class="Picture-img" src="images/12.jpg" alt="" />
-    <div class="Picture-note"><span>class 12th science</span></div>
+    <div class="Picture-note"><span>Class 12th science Batch 2024 - 2025</span></div>
   </div>
   <div class="Picture">
     <img class="Picture-img" src="images/11.jpg" alt="" />
-    <div class="Picture-note"><span>class 12th science</span></div>
+    <div class="Picture-note"><span>Class 12th science Batch 2024 - 2025</span></div>
   </div>
   <div class="Picture">
     <img class="Picture-img" src="images/10.jpg" alt="" />
@@ -68,7 +95,7 @@
   </div>
   <div class="Picture">
     <img class="Picture-img" src="images/4.jpg" alt="" />
-    <div class="Picture-note"><span>class 12th science</span></div>
+    <div class="Picture-note"><span>Class 12th science Batch 2024 - 2025</span></div>
   </div>
   <div class="Picture">
     <img class="Picture-img" src="images/3.jpg" alt="" />
@@ -76,6 +103,10 @@
   </div>
   <div class="Picture">
     <img class="Picture-img" src="images/2.jpg" alt="" />
+    <div class="Picture-note"><span>Class 12th science Batch 2024 - 2025</span></div>
+  </div>
+  <div class="Picture">
+    <img class="Picture-img" src="images/1.jpg" alt="" />
     <div class="Picture-note"><span>class 12th science</span></div>
   </div>
   
